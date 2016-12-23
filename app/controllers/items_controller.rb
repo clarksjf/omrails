@@ -23,7 +23,6 @@ class ItemsController < ApplicationController
   # POST /items
   def create
     @item = current_user.items.new(item_params)
-
       if @item.save
         redirect_to @item, notice: 'Item was successfully created.' 
         else
@@ -32,7 +31,6 @@ class ItemsController < ApplicationController
   end
 
   # PATCH/PUT /items/1
-
   def update
       @item = current_user.items.find(params[:id])
       if @item.update(item_params)

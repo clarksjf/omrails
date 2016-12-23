@@ -1,5 +1,4 @@
 <div class="container">
-
   <div class="row">
     <div class="col-md-4">
         <div class="card card-block">
@@ -18,7 +17,6 @@
         <center><%= link_to 'New Tweet', new_tweet_path %>
         </center>
       <% end %>
-
           <ul class="list-group">
           <% @tweets.each do |tweet| %>
             <%= link_to tweet, class: "list-group-item list-group-item-action" do %>
