@@ -25,8 +25,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-# Act as follower gem added by SC
-gem "acts_as_follower", github: "tcocca/acts_as_follower"
+
 
 
 # Use Redis adapter to run Action Cable in production
@@ -43,6 +42,13 @@ gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+# Act as follower gem added by SC
+gem "acts_as_follower", github: "tcocca/acts_as_follower"
+# Voting gem added by SC
+gem 'acts_as_votable', '~> 0.10.0'
+
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

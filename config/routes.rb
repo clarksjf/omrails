@@ -19,7 +19,13 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :items
+  resources :items do
+    member do
+      post 'vote', to: 'votes#create'
+      delete 'unvote', to: 'votes#destroy'
+    end
+  end
+
   resources :tweets
   root 'pages#home'
   get 'users/:username', to: 'users#show'  
