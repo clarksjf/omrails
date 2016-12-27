@@ -46,6 +46,7 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
 # Voting gem added by SC
 gem 'acts_as_votable', '~> 0.10.0'
+gem "paperclip", "~> 5.0.0"
 
 
 
