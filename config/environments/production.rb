@@ -75,6 +75,19 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
+
+# SC added in order to allow images to be saved to amazon s3
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV.fetch('omrails001'),
+      access_key_id: ENV.fetch('AKIAJMNTVH6344IL4S7Q'),
+      secret_access_key: ENV.fetch('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'),
+      s3_region: ENV.fetch('London'),
+    }
+  }
+
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter

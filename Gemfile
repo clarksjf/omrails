@@ -47,7 +47,8 @@ gem "acts_as_follower", github: "tcocca/acts_as_follower"
 # Voting gem added by SC
 gem 'acts_as_votable', '~> 0.10.0'
 gem "paperclip", "~> 5.0.0"
-
+# SC added to allow image save to amazon s3
+gem 'aws-sdk', '~> 2.3'
 
 
 
