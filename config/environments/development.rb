@@ -12,6 +12,18 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
+
+# SC added in order to allow images to be saved to amazon s3. not the suggestede code.
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: ENV.fetch('omrails001'),
+      access_key_id: ENV.fetch('AKIAJMNTVH6344IL4S7Q'),
+      secret_access_key: ENV.fetch('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'),
+      s3_region: ENV.fetch('London'),
+    }
+  }
+
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true
