@@ -46,10 +46,10 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
 # Voting gem added by SC
 gem 'acts_as_votable', '~> 0.10.0'
-gem "paperclip", "~> 5.0.0"
-# SC added to allow image save to amazon s3
-gem 'aws-sdk', '~> 2.3'
-# vesrion for aws is  , removed in attempt to solve image download issue
+gem "paperclip"
+# SC added to allow image save to amazon s3 , "~> 5.0.0"
+gem 'aws-sdk'
+# vesrion for aws is , '~> 2.3' , removed in attempt to solve image download issue
 
 
 group :development, :test do
