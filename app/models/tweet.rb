@@ -6,7 +6,7 @@ class Tweet < ApplicationRecord
 
   has_attached_file :image 
 
-  # validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/ sam changed to below.
-  validates_attachment :image, content_type: { content_type: /\Aimage\/.*\Z/ }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/ 
+ 
 
 end
